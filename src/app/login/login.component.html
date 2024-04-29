@@ -1,0 +1,10 @@
+<router-outlet> </router-outlet>
+<form (ngSubmit)="login()" #loginForm="ngForm">
+  <section class="form-login">
+    <h5>Iniciar Sesión</h5>
+    <input [(ngModel)]="usuario.correo" class="controls" type="text" name="Correo" value="" placeholder="Correo" required>
+    <input [(ngModel)]="usuario.password" class="controls" type="password" name="contrasena" value="" placeholder="Contraseña" required>
+    <input class="buttons" type="submit" value="Ingresar" [disabled]="!loginForm.valid">
+    <p><a href="#">¿Olvidaste tu Contraseña?</a></p>
+  </section>
+</form> 
